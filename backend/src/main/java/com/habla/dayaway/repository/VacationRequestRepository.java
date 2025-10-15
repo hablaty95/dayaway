@@ -34,9 +34,11 @@ public class VacationRequestRepository {
         }
     };
 
-    // ===============================
-    // CRUD OPERATIONS
-    // ===============================
+    public boolean existsById(Long id) {
+        String sql = "SELECT COUNT(*) FROM vacation_requests WHERE id = ?";
+        Integer count = jdbcTemplate.queryForObject(sql, Integer.class, id);
+        return count != null && count > 0;
+    }
 
     public List<VacationRequest> findAll() {
         String sql = "SELECT * FROM vacation_requests ORDER BY created_at DESC";
