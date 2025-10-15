@@ -5,6 +5,16 @@
   padding: 40px;
 }
 
+.employee-note,
+.employee-note strong,
+.employee-note .note-content,
+.resolution-section,
+.resolution-section .resolution-info,
+.resolution-section .resolution-info strong,
+.resolution-section .resolution-status {
+  color: #000000 !important;
+}
+
 h1 {
   color: #2c5aa0;
   margin-bottom: 10px;
